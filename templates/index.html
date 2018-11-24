@@ -1,160 +1,104 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>POI Visualization</title>
-    <link rel="stylesheet" href="../static/lib/leaflet/leaflet.css">
-    <link href="../static/lib/leaflet-dvf/css/dvf.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/leaflet.markercluster/1.0.5/MarkerCluster.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/leaflet.markercluster/1.0.5/MarkerCluster.Default.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/css/dashboard2.css" rel="stylesheet">
-    <link href="../static/css/clusterpies.css" rel="stylesheet">
-    <link href="../static/css/pcpstyle.css" rel="stylesheet">
-    <![endif]-->
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body>
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
+    <link href="https://cdn.bootcss.com/leaflet/1.3.4/leaflet.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">POI Visualization</a>
-        </div>
-        <div>
-            <p class="navbar-text area">当前区域-蜀山区</p>
-            <p class="navbar-text type">当前类别-all</p>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
+        <nav class="navbar navbar-expand navbar-fixed-top navbar-dark bg-dark">
+            <!-- <a class="navbar-brand py-0" href="#">Navbar</a> -->
+            <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link py-0" href="#">POI VIS  <span class="sr-only">(current)</span></a>
+                </li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
+            <div style="font-size: 14px;">
+                <span class="navbar-text py-0 area">当前区域-市区</span>
+                <span class="navbar-text py-0 type">当前类别-all</span>
+            </div>
+            <form class="form-inline ml-auto">
+                <select class="custom-select custom-select-sm py-0">
+                    <option value="shiqu" selected>市区</option>
+                    <option value="baohe">包河区</option>
+                    <option value="shushan">蜀山区</option>
+                    <option value="yaohai">瑶海区</option>
+                    <option value="luyang">庐阳区</option>
+                </select>
             </form>
-        </div>
+        </nav>
     </div>
-</nav>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li value="baohe" class="active"><a href="#">包河区 </a></li>
-                <li value="yaohai"><a href="#">瑶海区</a></li>
-                <li value="shushan"><a href="#">蜀山区</a></li>
-                <li value="luyang"><a href="#">庐阳区</a></li>
-                <li value="changfeng"><a href="#">长丰县</a></li>
-                <li value="feidong"><a href="#">肥东县</a></li>
-                <li value="feixi"><a href="#">肥西县</a></li>
-                <li value="lujiang"><a href="#">庐江县</a></li>
-                <li value="chaohu"><a href="#">巢湖市</a></li>
-                <li value="gaosu"><a href="#">高速</a></li>
-                <li value="shixia"><a href="#">市辖区</a></li>
-            </ul>
-        </div>
-        <div class="col-md-10 col-md-offset-2 main">
-            <div class="row maprow">
-                <div class="col-md-8 panel panel-default panel-body" id="map">
-                </div>
-                <div class="col-md-4 panel panel-default panel-body" id="somType">
-                    <!--各类别统计图-->
+    
+    <div class="container-fluid" style="height: 95vh;">
+        <div class="row maprow" style="height: 68%;">
+            <div class="col-md-2 h-100 pr-0" id="som">
+                <div class="card h-100">
+                    <div class="card-body">
+                        This is some text within a card body.
+                    </div>
                 </div>
             </div>
-
-            <div class="row pararow">
-                <div class="col-md-8 panel panel-default panel-body" id="parallel">
-                    <!--平行坐标图-->
+            <div class="col-md-7 pl-0 pr-0 h-100">
+                <!--地图-->
+                <div class="card h-100">
+                    <div class="card-body" id="map">
+                    </div>
                 </div>
-                <div class="col-md-4 panel panel-default panel-body" id="somColor">
-                    som颜色主题图
+            </div>
+            <div class="col-md-3 pl-0">
+                <div class="card h-100">
+                    <div class="card-body" id="somType">
+                        This is some text within a card body.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row pararow" style="height: 32%;">
+            <div class="col-12">
+                <div class="card h-100">
+                    <div class="card-body" id="parallel">
+                        This is some text within a card body.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <!-- leaflet -->
+    <script src="https://cdn.bootcss.com/leaflet/1.3.4/leaflet.js"></script>
+    <script src="../static/lib/proj4-compressed.js"></script>
+    <script src="../static/lib/proj4leaflet.js"></script>
+    <script src="../static/lib/tileLayer.baidu.js"></script>
+    <script src="../static/lib/Leaflet-heat/dist/leaflet-heat.js"></script>
+    <!-- my function -->
+    <script src="../static/js/bmap2.js"></script>
+    <script src="../static/js/xzqh.js"></script>
+    <script src="../static/js/heatmap.js"></script>
+    <script src="../static/js/interaction.js"></script>
+    
+    <script>
+        window.clusterdataPath = '/static/clusterdata/';
+        window.cur_area = "shiqu";
+        window.cur_type = "all";
 
-<!-- Bootstrap core JavaScript -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<!-- leaflet lib -->
-<script src="../static/lib/leaflet/leaflet.js"></script>
-<script src="../static/lib/leaflet-dvf/leaflet-dvf.js"></script>
-<script src="https://cdn.bootcss.com/leaflet.markercluster/1.0.5/leaflet.markercluster.js"></script>
-<script src="../static/lib/proj4-compressed.js"></script>
-<script src="../static/lib/proj4leaflet.js"></script>
-<script src="../static/lib/tileLayer.baidu.js"></script>
-<script src="../static/lib/geojson.js/geojson.min.js"></script>
-<!-- our function -->
-<script src="../static/js/bmap2.js"></script>
-<script src="../static/js/xzqh.js"></script>
-<script src="../static/js/color.js"></script>
-<script src="../static/js/barChart.js"></script>
-<script src="../static/js/update.js"></script>
-<script src="../static/js/pieChartMap.js"></script>
-<script src="../static/js/pcp.js"></script>
-<script src="../static/js/typeMarkers.js"></script>
-<script src="../static/js/selectControl.js"></script>
-<script>
-    clusterdataPath = "/static/clusterdata3/";
-    geojsondataPath = "/static/geojsondata3/";
-    poilist = ['休闲娱乐', '教育培训', '金融', '医疗', '美食', '购物'];
-    clusterGroup = L.layerGroup();  //存储som分类结果
-    geoLayer = L.geoJSON();
-    //markerclusters = L.markerClusterGroup();
-    //colorlist = d3.scale.category10().range();
-    colorlist = getcolormat();
-    clusterCount = [];   //存储每个类别point数量
-    xzqh_value = 'baohe';
-    window.type = "all";    //当前类别
-    poilegend = L.control({position: 'bottomright'});
-    linedata = [];  //存储平行坐标图数据
-
-    //支持对多类别进行分析, 存储选择的类别及其对应的geoLayer
-    typeList = {"all": null, "0": null, "1": null, "2": null, "3": null,
-                "4": null, "5": null, "6": null, "7": null, "8": null};
-
-    //选择侧边栏行政区划, 更新cluster
-    $(".nav-sidebar li").on("click", function() {
-        $(".nav-sidebar li").removeClass("active");
-        $(this).addClass("active");
-        var text = "当前区域-" + $(this).text();
-        $(".area").html(text);
-        var value = $(this).attr("value");
-        xzqh_value = value;
-        var cluster = xzqh[value]['cluster'];
-        var center = xzqh[value]['center'];
-        geoLayer.clearLayers();
-        markerclusters.clearLayers();
-        poilegend.remove();
-        if(!myselectCtr == undefined && !myselectCtr.getContainer() == undefined) {
-            myselectCtr.getContainer().innerHTML='';
-        }
-        window.type = "all";
-        var text = "当前类别-" + window.type;
-        $(".type").html(text);
-        updateCluster(cluster, center);
-    });
-
-    //初始包河区
-    updateCluster(xzqh['baohe']['cluster'], xzqh['baohe']['center']);
-
-</script>
-
-</body>
+        window.heat = null;
+        
+        drawHeatMap(window.clusterdataPath + xzqh[window.cur_area]['cluster']);
+    </script>   
+  </body>
 </html>
-

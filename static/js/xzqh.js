@@ -1,9 +1,9 @@
 var xzqh = {
-    'hefei': {
-        'xzqh': 'all',
+    'shiqu': {
+        'xzqh': '市区',
         'center': [31.825351, 117.233441],
-        'cluster': 'hefeishiCluster.json',
-        'geojson': ['hefei0.geojson', 'hefei1.geojson', 'hefei2.geojson', 'hefei3.geojson', 'hefei4.geojson', 'hefei5.geojson', 'hefei6.geojson', 'hefei7.geojson', 'hefei8.geojson']
+        'cluster': 'shiquClusters.json',
+        'geojson': ['shiqu0.geojson', 'shiqu1.geojson', 'shiqu2.geojson', 'shiqu3.geojson', 'shiqu4.geojson', 'shiqu5.geojson', 'shiqu6.geojson', 'shiqu7.geojson', 'shiqu8.geojson']
     },
     'shushan': {
         'xzqh': '蜀山区',

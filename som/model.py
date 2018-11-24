@@ -108,5 +108,5 @@ if __name__ == '__main__':
     fileName = "yaohaiquClusters.json"
     xzqh = "瑶海区"
     path = base + fileName
-    storeSom(path, xzqh)
-    #getPoiByArea('市辖区')
+    #storeSom(path, xzqh)
+    getPoiByArea('市辖区')
