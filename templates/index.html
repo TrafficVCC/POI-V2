@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/pcpstyle.css">
   </head>
   <body>
     <div class="container-fluid">
@@ -56,17 +57,25 @@
             <div class="col-md-3 pl-0">
                 <div class="card h-100">
                     <div class="card-body" id="somType">
-                        This is some text within a card body.
+                        <!-- bar chart -->
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="row pararow" style="height: 32%;">
-            <div class="col-12">
+            <div class="col-md-9 pr-0">
                 <div class="card h-100">
                     <div class="card-body" id="parallel">
-                        This is some text within a card body.
+                        <!-- 平行坐标 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 pl-0">
+                <div class="card h-100">
+                    <div class="card-body" id="somColor">
+                        <!-- som颜色 -->
                     </div>
                 </div>
             </div>
@@ -88,7 +97,11 @@
     <!-- my function -->
     <script src="../static/js/bmap2.js"></script>
     <script src="../static/js/xzqh.js"></script>
+    <script src="../static/js/color.js"></script>
+    <script src="../static/js/clearLayer.js"></script>
     <script src="../static/js/heatmap.js"></script>
+    <script src="../static/js/barChart.js"></script>
+    <script src="../static/js/pcp.js"></script>
     <script src="../static/js/interaction.js"></script>
     
     <script>
@@ -96,9 +109,17 @@
         window.cur_area = "shiqu";
         window.cur_type = "all";
 
+        window.colorlist = getcolormat();
+        //热力图
         window.heat = null;
+        //som聚类散点图层
+        window.clusterGroup = null;
+    
+        //缓存数据(不用每次重复请求)
+        window.clusterdata = [];
         
-        drawHeatMap(window.clusterdataPath + xzqh[window.cur_area]['cluster']);
+        //开始
+        updateView();
     </script>   
   </body>
 </html>
