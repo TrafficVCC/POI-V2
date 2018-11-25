@@ -18,3 +18,36 @@ var updateView = function() {
         drawPCP();
     });
 }
+
+//选择某个类别后,请求该类别各个事故点POI数据, 并存储为geojson
+function updateTypePoi(type) {
+    clearMap();
+    alert("update");
+    $.ajax({
+        type: "GET",
+        url:'/typepoi',
+        data: {'type': type, 'area': window.cur_area, 'xzqh': xzqh[window.cur_area]['xzqh']},
+        dataType:'json',//希望服务器返回json格式的数据
+        success: function (data, status) {
+            alert(status);
+            js = data;
+            console.log(js);
+            convertGeoJson(js);
+        }
+    });
+}
+
+var convertGeoJson = function (js) {
+    GeoJSON.parse(js, {Point: ['lat', 'lng']}, function (geojson) {
+        console.log(JSON.stringify(geojson));
+        $.ajax({
+            type: "POST",
+            url:'/geojson',
+            data: {"data": JSON.stringify(geojson), "filename": window.cur_area + window.cur_type },
+            dataType:'json',//希望服务器返回json格式的数据
+            success: function (data, status) {
+                alert(status);
+            }
+        });
+    });
+};

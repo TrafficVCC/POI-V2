@@ -3,6 +3,7 @@ import config
 pois = config.get_pois()
 radius = config.get_radius()
 precise = config.get_precise()
+shiqulist = ('包河区', '蜀山区', '瑶海区', '庐阳区')
 
 def getAllArea():
     """
@@ -71,7 +72,7 @@ def getPoiByArea(xzqh):
     print(len(poi_list))
     return poi_list
 
-def getAreaByType(xzqh, type):
+def getAreaByType(xzqh, area, type):
     """
     按行政区划和类别查询
     :param xzqh:
@@ -79,9 +80,14 @@ def getAreaByType(xzqh, type):
     :return:
     """
     cur = mysql.connection.cursor()
-    sql = "select xzqhms, sgdd, lng_bmap as lng, lat_bmap as lat, count(*) as count from ybsg \
+    if area == "shiqu":
+        sql = "select xzqhms, sgdd, lng_bmap as lng, lat_bmap as lat, count(*) as count from ybsg \
+              where xzqhms in %s and type is not null and type = %s and precise = 1 group by xzqhms, sgdd, lng_bmap, lat_bmap"
+        cur.execute(sql, (shiqulist, type,))
+    else:
+        sql = "select xzqhms, sgdd, lng_bmap as lng, lat_bmap as lat, count(*) as count from ybsg \
               where xzqhms = %s and type is not null and type = %s and precise = 1 group by xzqhms, sgdd, lng_bmap, lat_bmap"
-    cur.execute(sql, (xzqh, type,))
+        cur.execute(sql, (xzqh, type,))
     rv = cur.fetchall()
     return rv
 
@@ -93,21 +99,20 @@ def getPoiByType(xzqh, sgdd):
     rv = cur.fetchall()
     return rv
 
-def poiType(xzqh, type):
+def poiType(xzqh, area, type):
     """
     获取某一类事故点的poi
     :param xzqh:
     :param type:
-    :return: [{'center': {'sgdd': 'aa', 'lng': 11, 'lat': 22, 'count': 1},
-               'poi': [{'type': '学校', 'count': 10}, {}, ...] }]
+    :return: [{'sgdd': 'aa', 'lng': 11, 'lat': 22, 'count': 1,
+               'poi': [{'type': '学校', 'count': 10}, {}, ...] }, {}]
     """
-    sgdd_list = getAreaByType(xzqh, type)
+    sgdd_list = getAreaByType(xzqh, area, type)
     poi_list = []
     count = 0  # 有的事故地点没有poi点
-    poiType = ['交通设施', '休闲娱乐', '教育培训', '旅游景点', '美食', '购物']
     for item in sgdd_list:
         sgdd = item['sgdd']
-        rv = getPoiByType(xzqh, sgdd)
+        rv = getPoiByType(item['xzqhms'], sgdd)
         pp = {}
         if rv:
             #为了更好转换成geojson,其实不需要'center'

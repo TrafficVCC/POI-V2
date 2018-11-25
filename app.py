@@ -42,17 +42,18 @@ def poi():
 def typepoi():
     type = request.args.get('type', None)
     xzqh = request.args.get('xzqh', None)
+    area = request.args.get('area', None)
     if xzqh is None or type is None:
         return
     print(xzqh)
     print(type)
-    res = models.poiType(xzqh, type)
+    res = models.poiType(xzqh, area, type)
     return jsonify(res)
 
 @app.route('/geojson', methods=['GET', 'POST'])
 def geojson():
     #存储geojson文件
-    path = "./static/geojsondata3/"
+    path = "./static/geojsondata/"
     data = json.loads(request.form.get('data'))
     filename = request.form.get('filename') + ".geojson"
     print(data)
