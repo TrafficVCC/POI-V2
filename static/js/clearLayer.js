@@ -8,4 +8,10 @@ var clearMap = function() {
     if(window.heat != null) {
         map.removeLayer(window.heat);
     }
+
+    if(window.markerType != null) {
+        window.markerType.clearLayers();  
+    }
+
+    markerclusters.clearLayers();
 }

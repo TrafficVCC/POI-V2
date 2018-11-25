@@ -33,16 +33,29 @@ function selectOnchange1(obj) {
     }
 }
 
-var updateView = function() {
-    //update view
-    var clusterfile = window.clusterdataPath + xzqh[window.cur_area]['cluster'];
-    d3.json(clusterfile, function(err,data){
-        window.clusterdata = data;
+//地图自定义select控件, 切换视图
+//piechart markers select
+var myselectCtr2 = L.control({position: 'topright'});
 
-        myselectCtr1.addTo(map);
-        clearMap();
-        drawHeatMap();
-        drawBarChart();
-        drawPCP();
-    });
+myselectCtr2.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'form-group');
+    this._div.innerHTML = '<select class="custom-select custom-select-sm" id="myselect2" onchange="selectOnchange2(this);"> \
+                           <option value="markers" selected>散点图</option> \
+                           <option value="piechart">圆环图</option></select>';
+    return this._div;
+};
+
+function selectOnchange2(obj) {
+    var value = obj.options[obj.selectedIndex].value;
+    var geoFile = window.geojsondataPath + window.cur_area + window.cur_type + ".geojson";
+   
+    if(value == "markers") {
+        poilegend.remove();
+        markerclusters.clearLayers();
+        drawMarkers(geoFile);
+    } else if(value == "piechart") {
+        poilegend.remove();
+        window.markerType.clearLayers();    
+        drawPieChart(geoFile);
+    }
 }

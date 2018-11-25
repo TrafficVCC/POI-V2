@@ -72,3 +72,37 @@ function drawClusterPoints() {
     map.addLayer(clusterGroup);
     map.setView(xzqh[window.cur_area]['center'], 12);
 }
+
+
+//选择某一类后, 以marker显示该类别
+function drawMarkers(geojsonPath) {
+    d3.json(geojsonPath, function(error, data) {
+        console.log(data);
+        clearMap();
+
+        window.markerType = L.geoJSON(data, {
+            pointToLayer: pointToLayer,
+            onEachFeature: onEachFeature
+        }).addTo(map);
+
+        var bounds = window.markerType.getBounds();
+        map.fitBounds(bounds);
+    });
+
+    var pointToLayer = function (feature, latlng) {
+        var options = {
+            fillColor: window.colorlist[window.cur_type],
+            radius: 7,
+            color: "gray",
+            opacity: 0.8,
+            weight: 1.0,
+            fillOpacity: 0.8
+        };
+        return L.circleMarker(latlng, options);
+    };
+
+    var onEachFeature = function (feature, layer) {
+        var popupContent = feature.properties.sgdd + "<br>count: " + feature.properties.count;
+        layer.bindPopup(popupContent);
+    };
+}
