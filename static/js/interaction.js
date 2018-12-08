@@ -52,10 +52,10 @@ function selectOnchange2(obj) {
     if(value == "markers") {
         poilegend.remove();
         markerclusters.clearLayers();
-        drawMarkers(geoFile);
+        drawMarkers(geoFile); 
     } else if(value == "piechart") {
         poilegend.remove();
         window.markerType.clearLayers();    
-        drawPieChart(geoFile);
+        //drawPieChart(geoFile);
     }
 }

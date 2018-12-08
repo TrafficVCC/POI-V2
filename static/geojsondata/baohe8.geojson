@@ -1,0 +1,949 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          117.303432970989,
+          31.7984429156033
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 1,
+            "type": "医疗"
+          },
+          {
+            "count": 9,
+            "type": "美食"
+          },
+          {
+            "count": 5,
+            "type": "购物"
+          },
+          {
+            "count": 3,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "上海路东南汽车4S点门口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.316590267641,
+          31.7370360929298
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "美食"
+          }
+        ],
+        "sgdd": "中山路与华山路交叉路口西侧100米"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.317488573151,
+          31.7370360929298
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "美食"
+          }
+        ],
+        "sgdd": "中山路与华山路交口西侧"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.320161173976,
+          31.7941305670045
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 3,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 3,
+            "type": "医疗"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 10,
+            "type": "购物"
+          },
+          {
+            "count": 4,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "乌鲁木齐路与包河大道交口南约200米附近"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.318364562956,
+          31.7941305670045
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 7,
+            "type": "美食"
+          },
+          {
+            "count": 5,
+            "type": "购物"
+          }
+        ],
+        "sgdd": "乌鲁木齐路与包河大道交口西侧200米处附近"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.355572174162,
+          31.7848221996292
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 2,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 2,
+            "type": "医疗"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 2,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "兰州路与天津路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.30894940494,
+          31.8206106014089
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 6,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 7,
+            "type": "医疗"
+          },
+          {
+            "count": 1,
+            "type": "教育培训"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 10,
+            "type": "购物"
+          },
+          {
+            "count": 3,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "包河大道与南二环路交口南侧200米附近"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.355572174162,
+          31.7848221996292
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 2,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 2,
+            "type": "医疗"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 2,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "包河工业园区兰州路与天津路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.317488573151,
+          31.7370360929298
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "美食"
+          }
+        ],
+        "sgdd": "华山路与中山路交叉路口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.355456764362,
+          31.7920121663965
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 1,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "大连路与天津路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.361424690255,
+          31.7920066154485
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "美食"
+          }
+        ],
+        "sgdd": "大连路与山东路交叉口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.361424690255,
+          31.7920066154485
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "美食"
+          }
+        ],
+        "sgdd": "大连路与山东路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.355456764362,
+          31.7920121663965
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 1,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "大连路和天津路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.356613545604,
+          31.7917131538584
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 1,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "大连路王卫社区第二项目聚集区门前"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.355572174162,
+          31.7848221996292
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 2,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 2,
+            "type": "医疗"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 2,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "天津路与兰州路交叉口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.355456764362,
+          31.7920121663965
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 1,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "天津路与大连路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.361424690255,
+          31.7920066154485
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "美食"
+          }
+        ],
+        "sgdd": "山东路与大连路交叉口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.330188078044,
+          31.8406340539518
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 3,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 1,
+            "type": "教育培训"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 3,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "巢湖路五里庙装饰世界内"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.30549219354,
+          31.8008205259206
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 1,
+            "type": "医疗"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 6,
+            "type": "购物"
+          },
+          {
+            "count": 3,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "庐州大道盛大德馨府小区门口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.355433905181,
+          31.7875411735884
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 1,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "延安路与天津路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.328143469127,
+          31.7850397292036
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 1,
+            "type": "医疗"
+          },
+          {
+            "count": 8,
+            "type": "美食"
+          },
+          {
+            "count": 6,
+            "type": "购物"
+          },
+          {
+            "count": 2,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "延安路安徽宏实企业集团科工贸有限公司附近"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.325657947612,
+          31.8419756423495
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 5,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 3,
+            "type": "医疗"
+          },
+          {
+            "count": 1,
+            "type": "教育培训"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 10,
+            "type": "购物"
+          }
+        ],
+        "sgdd": "当涂路玫瑰绅城小区门口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.292181821138,
+          31.8079639609038
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 2,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 3,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "徽州大道与龙川路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.306886472387,
+          31.8067184049871
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 1,
+            "type": "教育培训"
+          },
+          {
+            "count": 8,
+            "type": "美食"
+          },
+          {
+            "count": 2,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "望湖西路与望湖南路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.282938674254,
+          31.8132862469335
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 8,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 7,
+            "type": "医疗"
+          },
+          {
+            "count": 2,
+            "type": "教育培训"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 10,
+            "type": "购物"
+          }
+        ],
+        "sgdd": "桐城南路与祁门路交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.337046601088,
+          31.8374049680281
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 5,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 2,
+            "type": "医疗"
+          },
+          {
+            "count": 1,
+            "type": "教育培训"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 10,
+            "type": "购物"
+          },
+          {
+            "count": 3,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "淝河路张巷站台附近"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.364905927733,
+          31.7795258313545
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 1,
+            "type": "教育培训"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 1,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "重庆路与花园大道交叉口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.30894940494,
+          31.8221446856779
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 6,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 4,
+            "type": "医疗"
+          },
+          {
+            "count": 1,
+            "type": "教育培训"
+          },
+          {
+            "count": 10,
+            "type": "美食"
+          },
+          {
+            "count": 2,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "马鞍山路与东流路交叉路口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.292181821138,
+          31.8079639609038
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 2,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 3,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "龙川路与徽州大道交口"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          117.292181821138,
+          31.8079639609038
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "count": 1,
+        "poi": [
+          {
+            "count": 2,
+            "type": "休闲娱乐"
+          },
+          {
+            "count": 5,
+            "type": "美食"
+          },
+          {
+            "count": 3,
+            "type": "购物"
+          },
+          {
+            "count": 1,
+            "type": "金融"
+          }
+        ],
+        "sgdd": "龙川路龙川路与徽州大道交口0米"
+      },
+      "type": "Feature"
+    }
+  ]
+}

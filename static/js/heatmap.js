@@ -74,8 +74,8 @@ function drawClusterPoints() {
 }
 
 
-//选择某一类后, 以marker显示该类别
-function drawMarkers(geojsonPath) {
+//选择某一类后, 以marker显示该类别(需要先存储至geojson)
+function drawMarkers2(geojsonPath) {
     d3.json(geojsonPath, function(error, data) {
         console.log(data);
         clearMap();
@@ -105,4 +105,36 @@ function drawMarkers(geojsonPath) {
         var popupContent = feature.properties.sgdd + "<br>count: " + feature.properties.count;
         layer.bindPopup(popupContent);
     };
+}
+
+
+//选择某一类后, 以marker显示该类别(不从geojson文件)
+function drawMarkers(geojsonPath) {
+    //直接从先前保存的window.clusterdata读取类别数据
+    var points = [];
+    var layers = [];
+    for(var i=0; i<window.clusterdata.length; i++) {
+        cluster = window.clusterdata[i];
+        if(cluster['class'] == window.cur_type) {
+            points = cluster['points'];
+            break;
+        }
+    }
+    console.log(points);
+    clearMap();
+    for (var j=0; j<points.length; j++) {
+        var layer = L.circleMarker([points[j].lat, points[j].lng], {
+            fillColor: window.colorlist[window.cur_type],
+            radius: 6,
+            color: "gray",
+            opacity: 0.8,
+            weight: 1.0,
+            fillOpacity: 0.8
+        }).bindTooltip(points[j].sgdd,{ direction: 'left' });
+
+        layers.push(layer);
+    }
+
+    window.markerType = L.layerGroup(layers);
+    map.addLayer(window.markerType);
 }
